@@ -13,5 +13,11 @@ public class HelloWorldController {
     public String sayHello(@RequestParam(value = "name", defaultValue = "hello") String name){
         return "Hello " + name;
     }
+
+    @GetMapping("/view")
+    public PersonModel viewUser(){
+        return new PersonModel(1,"Steven Tan",26);
+    }
+
     
 }
