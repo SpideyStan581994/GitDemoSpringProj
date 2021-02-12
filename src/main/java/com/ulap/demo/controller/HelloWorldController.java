@@ -13,5 +13,11 @@ public class HelloWorldController {
     public String sayHello(@RequestParam(value = "name", defaultValue = "hello") String name){
         return "Hello " + name;
     }
+
+    @GetMapping("/boom")
+    public String sayBoom(@RequestParam(value = "name", defaultValue = "John") String name){
+        return name + " are you ready? BOooooooooooooom!!!!";
+
+    }
     
 }
