@@ -19,5 +19,12 @@ public class HelloWorldController {
         return name + " are you ready? BOooooooooooooom!!!!";
 
     }
+
+    @GetMapping("/Kaboom")
+    public String sayKaBoom(@RequestParam(value = "name", defaultValue = "John") String name){
+        return name + " are you ready? Kaboom!!!!";
+
+    }
     
+
 }
