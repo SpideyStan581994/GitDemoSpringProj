@@ -14,10 +14,24 @@ public class HelloWorldController {
         return "Hello " + name;
     }
 
+
+    @GetMapping("/boom")
+    public String sayBoom(@RequestParam(value = "name", defaultValue = "John") String name){
+        return name + " are you ready? BOooooooooooooom!!!!";
+
+    }
+
+    @GetMapping("/Kaboom")
+    public String sayKaBoom(@RequestParam(value = "name", defaultValue = "John") String name){
+        return name + " are you ready? Kaboom!!!!";
+
+    }
+
     @GetMapping("/view")
     public PersonModel viewUser(){
         return new PersonModel(1,"Steven Tan",26);
     }
 
     
+
 }
